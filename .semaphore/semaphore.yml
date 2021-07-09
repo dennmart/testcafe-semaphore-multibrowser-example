@@ -1,0 +1,31 @@
+version: v1.0
+name: Test MyApp
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1804
+blocks:
+  - name: Google Chrome
+    task:
+      jobs:
+        - name: Setup
+          commands:
+            - checkout
+            - sem-version node 12
+            - cache restore
+            - npm install
+            - cache store
+        - name: Test
+          commands:
+            - 'npm run test:chrome:headless'
+      env_vars:
+        - name: TEAMYAP_ADMIN_EMAIL
+          value: dennis@dennmart.com
+        - name: TEAMYAP_ADMIN_PASSWORD
+          value: 'e$ZV#$hktG3AamtDCjQOV^8cQL2hJ3^%'
+        - name: TEAMYAP_ADMIN_NAME
+          value: Dennis Martinez
+        - name: TEAMYAP_USER_EMAIL
+          value: jane.smith@teamyap.app
+        - name: TEAMYAP_USER_PASSWORD
+          value: BVr7b8iU$%32*YAE@hl6W8YH7Ug82p9Z
