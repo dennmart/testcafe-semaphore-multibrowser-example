@@ -8,15 +8,13 @@ blocks:
   - name: Google Chrome
     task:
       jobs:
-        - name: Setup
+        - name: Setup and run tests
           commands:
             - checkout
             - sem-version node 12
             - cache restore
             - npm install
             - cache store
-        - name: Test
-          commands:
             - 'npm run test:chrome:headless'
       env_vars:
         - name: TEAMYAP_ADMIN_EMAIL
