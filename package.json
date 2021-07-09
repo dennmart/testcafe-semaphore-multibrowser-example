@@ -1,0 +1,20 @@
+{
+  "name": "testcafe-semaphore-multibrowser-example",
+  "version": "1.0.0",
+  "description": "Example for running end-to-end tests on multiple browsers using Semaphore CI",
+  "scripts": {
+    "test:chrome:headless": "testcafe chrome:headless *_test.js",
+    "test:firefox:headless": "testcafe firefox:headless *_test.js",
+    "test:edge:headless": "testcafe edge:headless *_test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dennmart/testcafe-semaphore-multibrowser-example.git"
+  },
+  "author": "Dennis Martinez",
+  "license": "MIT",
+  "homepage": "https://github.com/dennmart/testcafe-semaphore-multibrowser-example#readme",
+  "dependencies": {
+    "testcafe": "^1.15.0"
+  }
+}
