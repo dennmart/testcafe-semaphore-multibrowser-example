@@ -28,6 +28,7 @@ blocks:
           commands:
             - checkout
             - sem-version node 12
+            - sem-version firefox 78
             - cache restore
             - npm install
             - cache store
